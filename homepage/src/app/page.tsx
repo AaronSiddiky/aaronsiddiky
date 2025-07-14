@@ -75,7 +75,7 @@ export default function Home() {
             <a href="https://x.com/prayForPopeLeo/status/1896710209952948537" target="_blank" rel="noopener noreferrer" className="inline-block px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs font-mono hover:bg-slate-200 transition">View Tweet</a>
           </div>
           <div className="text-slate-500 text-base font-sans font-medium mb-4 max-w-lg">
-            I like to build, and ship fast. I love competition, free-enterprise and breaking things. Not everything I've made has made money but they've helped get where I am today. 
+            I like to build, and ship fast. I love competition, free-enterprise and breaking things. Not everything I&apos;ve made has made money but they&apos;ve helped get where I am today. 
           </div>
           <ul className="text-slate-500 text-base font-sans font-medium space-y-2 mb-2 max-w-lg">
             <li><span className="font-bold text-slate-600">Ownedit.org (Current):</span> AI Accountability Tool for Academic Honesty</li>

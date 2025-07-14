@@ -36,7 +36,7 @@ export default function About() {
               <span className="text-slate-500">Issued By Minnesota DECA Inc.</span>
             </li>
             <li>
-              <span className="font-bold text-slate-800">IB MYP Class of 2022' Valedictorian</span>
+              <span className="font-bold text-slate-800">IB MYP Class of 2022&apos; Valedictorian</span>
               <br />
               <span className="text-slate-500">Issued By The Australian International School</span>
             </li>
