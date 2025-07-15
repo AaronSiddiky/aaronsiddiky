@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   verification: {
-    google: "El5dsjfZ2duC8OuVTl",
+    google: "EI5dsjfZ2duC8OuVTHOwaRDDkqOdwuHlitxxM15wlWo",
   },
 };
 
