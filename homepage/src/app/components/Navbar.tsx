@@ -10,14 +10,8 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex-1 flex justify-end gap-8">
-        <a className="hover:underline transition-colors duration-200 cursor-not-allowed pointer-events-none text-slate-400" aria-disabled="true">
-          Start-Up Journey
-        </a>
         <a href="/about" className="hover:underline transition-colors duration-200">
           About
-        </a>
-        <a href="#" className="hover:underline transition-colors duration-200">
-          Publications & Media Coverage
         </a>
       </div>
     </header>
