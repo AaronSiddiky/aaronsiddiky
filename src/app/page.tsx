@@ -60,7 +60,7 @@ export default function Home() {
             <div className="pt-3">
               <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">media coverage and awards</p>
               <div className="space-y-1.5 text-black text-sm">
-                <div>• Minnesota Cup Semifinalist (Media Coverage by NBC Affiliates KARE11, Atlanta&apos;s 11Alive, The Sun Sailor, and the Business Jounral)</div>
+                <div>• <a href="https://www.kare11.com/article/money/business/behind-the-business/cant-stop-scrolling-minnesota-high-school-seniors-want-to-help/89-1bce2dfb-6a5c-49ce-a244-6ff6ab036fc2" target="_blank" rel="noopener noreferrer" className="border-b border-black hover:bg-black hover:text-white transition-colors">&quot;Behind the Business: AxaBlock&quot;</a>: NBC News Affiliates covered my first company (founded at 16) Covered by Minneapolis&apos; KARE11, Atlanta&apos;s 11Alive, The Sun Sailor, and the Business Journal.</div>
                 <div>• 2024 Columbia Engineering Fast Pitch: Won 3rd Place ($400) in Columbia&apos;s oldest fast pitch competition (Freshman Year)</div>
                 <div className="pt-1">
                   <span className="text-gray-600 cursor-default">more</span>
