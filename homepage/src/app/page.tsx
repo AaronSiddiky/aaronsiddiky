@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Typewriter from "./components/Typewriter";
 
 function getDecimalAge(birthday: Date) {
   const now = new Date();
@@ -12,6 +10,7 @@ function getDecimalAge(birthday: Date) {
 
 export default function Home() {
   const [age, setAge] = useState(() => getDecimalAge(new Date(2006, 6, 11)));
+  const [expandedImage, setExpandedImage] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,85 +19,173 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const images = [
+    { id: 0, color: 'from-gray-300 to-gray-400', type: 'video', src: '/sfclip.mov' },
+    { id: 1, color: 'from-blue-200 to-blue-300', type: 'image', src: '/award.jpeg' },
+    { id: 2, color: 'from-green-200 to-green-300', type: 'image', src: '/graduation.JPG' },
+    { id: 3, color: 'from-purple-200 to-purple-300', type: 'image', src: '/kare11.png' },
+    { id: 4, color: 'from-pink-200 to-pink-300', type: 'image', src: '/speaker.JPEG' },
+  ];
+
+  const getImageWidth = (imageId: number) => {
+    if (expandedImage === null) {
+      return imageId === 0 ? 'w-[200px]' : 'w-[70px]';
+    }
+    if (expandedImage === imageId) {
+      return 'w-[350px]';
+    }
+    return 'w-[50px]';
+  };
+
   return (
-    <div className="bg-white text-black font-sans flex flex-col flex-1 h-screen">
-      <main className="relative flex-1 flex flex-col md:flex-row items-start justify-start overflow-hidden px-8 gap-4 h-full">
-        {/* Left column: Name, age, bio, socials */}
-        <div className="flex-1 min-w-0 max-w-xl overflow-y-auto h-full mt-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-black mb-2">
-            AARON SIDDIKY
-          </h1>
-          <span className="text-2xl font-mono font-semibold text-slate-700 mb-2">
-            {age.toFixed(8)} <span className="text-lg font-sans font-medium text-slate-500">years old</span>
-          </span>
-          <span className="block text-base font-sans font-medium text-slate-500 mb-4 w-full max-w-xl break-words">
-            <Typewriter
-              text="Currently founder at ownedit.org, empowering real learning in the age of AI. Computer Science and Economics at Columbia University in the City of New York"
-              className="block text-base font-sans font-medium text-slate-500 w-full max-w-xl break-words"
-              typingSpeed={12}
-              pauseDuration={5000}
-            />
-          </span>
-          {/* Redesigned Socials/contact info (no icons) */}
-          <div className="w-full flex flex-col gap-2 mb-4">
-            <a href="https://twitter.com/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-0 py-3 rounded-lg transition bg-white hover:bg-slate-50 group">
-              <span className="font-sans text-base font-medium text-slate-500">Twitter</span>
-              <span className="ml-4 font-sans text-base font-medium text-slate-500 underline group-hover:text-slate-700">@AaronSiddiky</span>
-            </a>
-            <a href="https://linkedin.com/in/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-0 py-3 rounded-lg transition bg-white hover:bg-slate-50 group">
-              <span className="font-sans text-base font-medium text-slate-500">LinkedIn</span>
-              <span className="ml-4 font-sans text-base font-medium text-slate-500 underline group-hover:text-slate-700">@AaronSiddiky</span>
-            </a>
-            <a href="https://github.com/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-0 py-3 rounded-lg transition bg-white hover:bg-slate-50 group">
-              <span className="font-sans text-base font-medium text-slate-500">GitHub</span>
-              <span className="ml-4 font-sans text-base font-medium text-slate-500 underline group-hover:text-slate-700">@AaronSiddiky</span>
-            </a>
-            <a href="mailto:aaron.siddiky@columbia.edu" className="flex items-center gap-3 px-0 py-3 rounded-lg transition bg-white hover:bg-slate-50 group">
-              <span className="font-sans text-base font-medium text-slate-500">Email</span>
-              <span className="ml-4 font-sans text-base font-medium text-slate-500 underline group-hover:text-slate-700">aaron.siddiky@columbia.edu</span>
-            </a>
+    <div className="bg-white font-mono min-h-screen">
+      {/* Hero Section with Images */}
+      <section className="flex flex-col lg:flex-row gap-12 px-8 md:px-16 lg:px-24 py-8 items-center">
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2 max-w-2xl space-y-6">
+          <div className="pb-3">
+            <h1 className="text-3xl font-bold text-black tracking-tight">
+              aaron siddiky
+            </h1>
+          </div>
+          
+          <div className="space-y-5 text-base leading-relaxed">
+            <p className="text-black">
+              computer science @ columbia university
+            </p>
+
+            <p className="text-black">
+              Currently the founder of <a href="https://enagrams.com" target="_blank" rel="noopener noreferrer" className="border-b border-black hover:bg-black hover:text-white transition-colors">Enagrams</a>, an AI infrastructure company that lets users import their context data across agentic applications.
+            </p>
+
+            <p className="text-black">
+              2026 Venture Fellow at New Enterprise Associates (NEA). I will be working alongside the NEA Investment Committee (previous investments in Uber, Plaid, Cloudflare, Robinhood etc).
+            </p>
+
+            <div className="pt-3">
+              <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">past ventures and research distillations</p>
+              <div className="space-y-1.5 text-black">
+                <div>→ <a href="https://zkypee.com" target="_blank" rel="noopener noreferrer" className="border-b border-black hover:bg-black hover:text-white transition-colors">zkypee</a> — AI voice agent VOIP service</div>
+                <div>→ <a href="https://ownedit.org" target="_blank" rel="noopener noreferrer" className="border-b border-black hover:bg-black hover:text-white transition-colors">ownedit</a> — AI accountability for education</div>
+                <div>→ oncoscopic — skin cancer detection AI</div>
+                <div>→ axablock — fintech social betting</div>
+              </div>
+            </div>
+
+            <div className="pt-3">
+              <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">media coverage and awards</p>
+              <div className="space-y-1.5 text-black text-sm">
+                <div>• Minnesota Cup Semifinalist (Media Coverage by NBC Affiliates KARE11, Atlanta's 11Alive, The Sun Sailor, and the Business Jounral)</div>
+                <div>• 2024 Columbia Engineering Fast Pitch: Won 3rd Place ($400) in Columbia's oldest fast pitch competition (Freshman Year)</div>
+                <div className="pt-1">
+                  <span className="text-gray-600 cursor-default">more</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-gray-300">
+              <div className="flex flex-wrap gap-6 text-sm">
+                <a href="mailto:aaron.siddiky@columbia.edu" className="hover:text-gray-600 transition-colors">email</a>
+                <a href="https://linkedin.com/in/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">linkedin</a>
+                <a href="https://github.com/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">github</a>
+                <a href="https://twitter.com/AaronSiddiky" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Gallery */}
+        <div className="w-full lg:w-1/2 flex gap-2 overflow-hidden">
+          {images.map((image) => (
+            <div
+              key={image.id}
+              onClick={() => setExpandedImage(expandedImage === image.id ? null : image.id)}
+              className={`flex-shrink-0 ${getImageWidth(image.id)} h-[400px] bg-gray-200 rounded-3xl overflow-hidden relative cursor-pointer transition-all duration-500 ease-in-out`}
+            >
+              {image.type === 'video' ? (
+                <>
+                  <video 
+                    src={image.src}
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover grayscale"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                      </svg>
+                    </div>
+                  </div>
+                </>
+              ) : image.src ? (
+                <>
+                  <img 
+                    src={image.src}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover grayscale"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                      </svg>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${image.color}`}></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                      </svg>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Additional Sections */}
+      <section className="px-8 md:px-16 py-16 bg-gray-50">
+        <div className="w-full max-w-2xl mx-auto space-y-12">
+          
+          {/* About */}
+          <div className="space-y-4">
+            <h2 className="text-lg font-bold text-black uppercase tracking-wider border-b-2 border-black pb-2 inline-block">About</h2>
+            <div className="text-base leading-relaxed space-y-4 text-black">
+              <p>
+                Aaron Siddiky is an American entrepreneur and computer scientist who is the Founder and CEO of Enagrams. He is a full-ride scholarship recipient, and a 2024 Carl M. Brukenfeld Class of 1927 Memorial Named Scholar at Columbia University.
+              </p>
+              <div className="grid grid-cols-2 gap-4 text-sm pt-4">
+                <div>
+                  <span className="text-gray-600">born</span>
+                  <p>july 11, 2006</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">location</span>
+                  <p>washington d.c.</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">nationality</span>
+                  <p>american</p>
+                </div>
+                <div>
+                  <span className="text-gray-600">education</span>
+                  <p>columbia university</p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
-        {/* Right column: About/projects/button */}
-        <div className="flex-1 min-w-0 md:pl-42 md:ml-50 md:mt-9 mt-0 max-w-lg overflow-y-auto h-full">
-          {/* Tweet testimonial card above paragraph */}
-          <div className="mb-4 bg-white rounded-xl shadow border border-slate-100 p-3 max-w-md">
-            <div className="mb-1">
-              <span className="font-semibold text-slate-700 font-mono text-sm">Tim Norton</span>
-              <span className="text-slate-400 text-xs font-mono ml-2">@prayForPopeLeo · Mar 3, 2025</span>
-            </div>
-            <div className="text-slate-700 font-mono text-sm mb-2">
-              <span className="font-semibold">@AaronSiddiky @LeonardHolter</span> <br />
-              Microsoft abandons Skype after spending $500billion(?) building it. Two high-schoolers build a replacement for $20 using AI. So 2025
-            </div>
-            <a href="https://x.com/prayForPopeLeo/status/1896710209952948537" target="_blank" rel="noopener noreferrer" className="inline-block px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs font-mono hover:bg-slate-200 transition">View Tweet</a>
-          </div>
-          <div className="text-slate-500 text-base font-sans font-medium mb-4 max-w-lg">
-            I like to build, and ship fast. I love competition, free-enterprise and breaking things. Not everything I&apos;ve made has made money but they&apos;ve helped get where I am today. 
-          </div>
-          <ul className="text-slate-500 text-base font-sans font-medium space-y-2 mb-2 max-w-lg">
-            <li><span className="font-bold text-slate-600">Ownedit.org (Current):</span> AI Accountability Tool for Academic Honesty</li>
-            <li><span className="font-bold text-slate-600">Zkypee.com (Revenue Generating):</span> AI Voice Agent VOIP Service for Small Businesses</li>
-            <li><span className="font-bold text-slate-600">Oncoscopic:</span> Cancerous Skin Lesion Ai Agent</li>
-            <li><span className="font-bold text-slate-600">KitchCraving:</span> DoorDash for Homemade Food</li>
-            <li><span className="font-bold text-slate-600">AxaBlock:</span> FinTech Social Betting App</li>
-          </ul>
-          <div className="text-slate-500 text-base font-sans font-medium mb-2">And like a hundred other small projects.</div>
-        </div>
-        {/* Optional: background image, faded, if you want to keep it */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none">
-          <Image
-            src="/siddikypic.png"
-            alt="Aaron Siddiky"
-            width={1600}
-            height={1800}
-            className="object-contain mix-blend-multiply opacity-60 blur-sm w-full h-full"
-            priority
-            style={{ width: '100%', height: '100%' }}
-          />
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
