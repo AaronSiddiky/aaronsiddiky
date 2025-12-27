@@ -12,7 +12,7 @@ export default function About() {
             Aaron Siddiky is an American entrepreneur, leader, and computer scientist. He is a full-ride scholarship recipient, and a 2024 Carl M. Brukenfeld Class of 1927 Memorial Named Scholar concentrating in Computer Science and Economics at Columbia University.
           </p>
           <p className="text-lg text-gray-700 font-light leading-relaxed">
-            Aaron Siddiky is a huge believer in building fast and breaking things. All experience is good experience when something can be taken out from it. Some of the companies he's built, both successful and unsuccessful include his current ventures and past projects.
+            Aaron Siddiky is a huge believer in building fast and breaking things. All experience is good experience when something can be taken out from it. Some of the companies he&apos;s built, both successful and unsuccessful include his current ventures and past projects.
           </p>
         </div>
 

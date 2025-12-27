@@ -1,23 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-
-function getDecimalAge(birthday: Date) {
-  const now = new Date();
-  const diff = now.getTime() - birthday.getTime();
-  const years = diff / (1000 * 60 * 60 * 24 * 365.2425);
-  return years;
-}
+import React, { useState } from "react";
 
 export default function Home() {
-  const [age, setAge] = useState(() => getDecimalAge(new Date(2006, 6, 11)));
   const [expandedImage, setExpandedImage] = useState<number | null>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAge(getDecimalAge(new Date(2006, 6, 11)));
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   const images = [
     { id: 0, color: 'from-gray-300 to-gray-400', type: 'video', src: '/sfclip.mov' },
@@ -75,8 +60,8 @@ export default function Home() {
             <div className="pt-3">
               <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">media coverage and awards</p>
               <div className="space-y-1.5 text-black text-sm">
-                <div>• Minnesota Cup Semifinalist (Media Coverage by NBC Affiliates KARE11, Atlanta's 11Alive, The Sun Sailor, and the Business Jounral)</div>
-                <div>• 2024 Columbia Engineering Fast Pitch: Won 3rd Place ($400) in Columbia's oldest fast pitch competition (Freshman Year)</div>
+                <div>• Minnesota Cup Semifinalist (Media Coverage by NBC Affiliates KARE11, Atlanta&apos;s 11Alive, The Sun Sailor, and the Business Jounral)</div>
+                <div>• 2024 Columbia Engineering Fast Pitch: Won 3rd Place ($400) in Columbia&apos;s oldest fast pitch competition (Freshman Year)</div>
                 <div className="pt-1">
                   <span className="text-gray-600 cursor-default">more</span>
                 </div>
