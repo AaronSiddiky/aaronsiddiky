@@ -24,6 +24,7 @@ export default function Home() {
 
   return (
     <div className="bg-white font-mono min-h-screen">
+
       {/* Hero Section with Images */}
       <section className="flex flex-col lg:flex-row gap-12 px-8 md:px-16 lg:px-24 py-8 items-center">
         {/* Text Content */}
