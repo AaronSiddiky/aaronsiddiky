@@ -14,13 +14,51 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aaron Siddiky",
-  description: "Aaron Siddiky - Founder, Developer, and Student at Columbia University. Building the future of AI and education.",
+  title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
+  description:
+    "Aaron Siddiky is an American entrepreneur and computer scientist. Founder & CEO of Enagrams. 2026 Venture Fellow at New Enterprise Associates (NEA). Computer Science at Columbia University.",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
   verification: {
     google: "EI5dsjfZ2duC8OuVTHOwaRDDkqOdwuHlitxxM15wlWo",
+  },
+  metadataBase: new URL("https://www.aaronsiddiky.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
+    description:
+      "Founder & CEO of Enagrams. 2026 Venture Fellow at NEA. Computer Science at Columbia University.",
+    url: "https://www.aaronsiddiky.com",
+    siteName: "Aaron Siddiky",
+    images: [
+      {
+        url: "/siddikypic.png",
+        width: 800,
+        height: 800,
+        alt: "Aaron Siddiky",
+      },
+    ],
+    locale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary",
+    title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
+    description:
+      "Founder & CEO of Enagrams. 2026 Venture Fellow at NEA. Computer Science at Columbia University.",
+    images: ["/siddikypic.png"],
+    creator: "@AaronSiddiky",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
