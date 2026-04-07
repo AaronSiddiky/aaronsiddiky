@@ -84,8 +84,8 @@ Full-stack real-time communication platform **built in 48 hours**. Scaled rapidl
 </td>
 <td width="50%" valign="top">
 
-###  AxaBlock — Blockchain Infrastructure
-Blockchain venture built and shipped at 16. Featured on national media.
+###  AxaBlock — Get Paid to Stay of Your Phone
+Made a social betting app that pays you to stay of your phone. Join a group of friends and hedge a financial commitment to staying off your phone. Users that lose their bet contribute money to the winners pool which gets redistributed amongst the winners. 
 
 [ **NBC News Coverage**](https://nbcnews.com)
 
