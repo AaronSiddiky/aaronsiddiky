@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
   description:
-    "Aaron Siddiky is an American entrepreneur and computer scientist. Founder & CEO of Enagrams. 2026 Venture Fellow at New Enterprise Associates (NEA). Computer Science at Columbia University.",
+    "Aaron Siddiky is an American entrepreneur, computer scientist, and investor. Co-Founder & CEO of Anticipate. Tech Investments Analyst at New Enterprise Associates (NEA). Computer Science at Columbia University.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
     description:
-      "Founder & CEO of Enagrams. 2026 Venture Fellow at NEA. Computer Science at Columbia University.",
+      "Co-Founder & CEO of Anticipate. Tech Investments Analyst at NEA. Computer Science at Columbia University.",
     url: "https://www.aaronsiddiky.com",
     siteName: "Aaron Siddiky",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Aaron Siddiky — Entrepreneur, Computer Scientist, Investor",
     description:
-      "Founder & CEO of Enagrams. 2026 Venture Fellow at NEA. Computer Science at Columbia University.",
+      "Co-Founder & CEO of Anticipate. Tech Investments Analyst at NEA. Computer Science at Columbia University.",
     images: ["/siddikypic.png"],
     creator: "@AaronSiddiky",
   },

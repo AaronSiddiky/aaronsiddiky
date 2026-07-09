@@ -14,8 +14,8 @@ const personJsonLd = {
     caption: "Aaron Siddiky",
   },
   description:
-    "American entrepreneur and computer scientist. Founder and CEO of Enagrams. 2026 Venture Fellow at New Enterprise Associates (NEA). Computer Science student at Columbia University.",
-  jobTitle: "Founder & CEO",
+    "American entrepreneur, computer scientist, and investor. Co-Founder and CEO of Anticipate. Tech Investments Analyst at New Enterprise Associates (NEA). Computer Science student at Columbia University.",
+  jobTitle: "Co-Founder & CEO",
   birthDate: "2006-07-11",
   nationality: {
     "@type": "Country",
@@ -28,10 +28,10 @@ const personJsonLd = {
   worksFor: [
     {
       "@type": "Organization",
-      name: "Enagrams",
-      url: "https://enagrams.com",
+      name: "Anticipate",
+      url: "https://www.useanticipate.com",
       description:
-        "AI infrastructure company that lets users import their context data across agentic applications",
+        "Consumer AI start-up building general user models to make AI that helps without you needing to ask for it",
       founder: {
         "@id": "https://www.aaronsiddiky.com/#person",
       },
@@ -54,7 +54,7 @@ const personJsonLd = {
     "Computer Science",
     "Entrepreneurship",
     "Venture Capital",
-    "AI Infrastructure",
+    "Consumer AI",
     "Software Engineering",
   ],
   award: [
@@ -122,23 +122,36 @@ export default function Home() {
             </p>
 
             <p className="text-black">
-              Currently the founder of{" "}
+              Currently the Co-founder, and CEO of consumer AI start-up
+              Anticipate. Anticipate builds general user models to make AI that
+              helps without you needing to ask for it.{" "}
               <a
-                href="https://enagrams.com"
+                href="https://www.useanticipate.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-b border-black hover:bg-black hover:text-white transition-colors"
               >
-                Enagrams
+                www.useanticipate.com
               </a>
-              , an AI infrastructure company that lets users import their context
-              data across agentic applications.
             </p>
 
             <p className="text-black">
-              2026 Venture Fellow at New Enterprise Associates (NEA). I will be
-              working alongside the NEA Investment Committee (previous
-              investments in Uber, Plaid, Cloudflare, Robinhood etc).
+              I&apos;m also a Tech Investments Analyst at the venture capital
+              firm, New Enterprise Associates (NEA). Founded in 1977, NEA has
+              more than $28 billion in assets under management as of June 30,
+              2025. As one of the largest venture funds in the world, NEA has
+              284 portfolio company IPOs and more than 500 mergers and
+              acquisitions.
+              For more information, please visit{" "}
+              <a
+                href="https://www.nea.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black hover:bg-black hover:text-white transition-colors"
+              >
+                www.nea.com
+              </a>
+              .
             </p>
 
             <div className="pt-3">
@@ -262,8 +275,10 @@ export default function Home() {
             </div>
             <div className="w-full md:w-2/3 text-base leading-relaxed space-y-4 text-black">
               <p>
-                Aaron Siddiky is an American entrepreneur and computer scientist
-                who is the Founder and CEO of Enagrams. He is a full-ride
+                Aaron Siddiky is an American entrepreneur, computer scientist,
+                and investor who is currently the Co-Founder and CEO of
+                Anticipate, and a Tech Investments Analyst at the venture
+                capital fund New Enterprise Associates. He is a full-ride
                 scholarship recipient, and a 2024 Carl M. Brukenfeld Class of
                 1927 Memorial Named Scholar at Columbia University.
               </p>
