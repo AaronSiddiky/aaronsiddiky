@@ -2,7 +2,7 @@
 
 # Aaron Siddiky 
 
-**Computer Science @ Columbia University**
+**Computer Science @ Columbia University, Investing & Applied AI @ NEA**
 
 [![Investing & Applied AI @ NEA](https://img.shields.io/badge/NEA-Venture_Fellow-000000?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://www.nea.com/)
 [![Notable Capital](https://img.shields.io/badge/Notable_Capital-AI_Fellow-4A90D9?style=for-the-badge)](https://www.notablecap.com/)
