@@ -4,7 +4,7 @@
 
 **Computer Science @ Columbia University**
 
-[![NEA Fellow](https://img.shields.io/badge/NEA-Venture_Fellow-000000?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://www.nea.com/)
+[![Investing & Applied AI @ NEA](https://img.shields.io/badge/NEA-Venture_Fellow-000000?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white)](https://www.nea.com/)
 [![Notable Capital](https://img.shields.io/badge/Notable_Capital-AI_Fellow-4A90D9?style=for-the-badge)](https://www.notablecap.com/)
 
 `agentic memory systems` · `autonomous agents` · `AI infrastructure` · `knowledge graphs`
