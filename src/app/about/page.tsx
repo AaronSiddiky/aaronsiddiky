@@ -69,14 +69,14 @@ const personJsonLd = {
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-white font-mono">
+    <main className="min-h-screen bg-white font-serif">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
       <section className="px-8 md:px-16 lg:px-24 py-16">
         <article className="w-full max-w-5xl mx-auto">
-          <h1 className="text-lg font-bold text-black uppercase tracking-wider border-b-2 border-black pb-2 inline-block mb-8">
+          <h1 className="text-lg font-normal text-black uppercase tracking-wider border-b-2 border-black pb-2 inline-block mb-8">
             About
           </h1>
           <div className="flex flex-col md:flex-row gap-10 items-start">
@@ -87,7 +87,7 @@ export default function About() {
                 className="w-full rounded-2xl object-cover"
               />
             </div>
-            <div className="w-full md:w-2/3 text-base leading-relaxed space-y-4 text-black">
+            <div className="w-full md:w-2/3 text-lg leading-relaxed space-y-4 text-black">
               <p>
                 Aaron Siddiky is an American entrepreneur, computer scientist,
                 and investor who is currently the Co-Founder and CEO of

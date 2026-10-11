@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ImageGallery from "./components/ImageGallery";
 
 const personJsonLd = {
@@ -96,7 +97,7 @@ const websiteJsonLd = {
 
 export default function Home() {
   return (
-    <main className="bg-white font-mono min-h-screen">
+    <main className="bg-white font-serif min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -111,52 +112,64 @@ export default function Home() {
         {/* Text Content */}
         <div className="w-full lg:w-1/2 max-w-2xl space-y-6">
           <div className="pb-3">
-            <h1 className="text-3xl font-bold text-black tracking-tight">
+            <h1 className="text-4xl font-display font-normal text-black tracking-tight">
               aaron siddiky
             </h1>
           </div>
 
-          <div className="space-y-5 text-base leading-relaxed">
+          <div className="space-y-5 text-lg leading-relaxed">
             <p className="text-black">
               computer science @ columbia university
             </p>
 
             <p className="text-black">
-              Currently the Co-founder, and CEO of consumer AI start-up
-              Anticipate. Anticipate builds general user models to make AI that
-              helps without you needing to ask for it.{" "}
-              <a
-                href="https://www.useanticipate.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-black hover:bg-black hover:text-white transition-colors"
-              >
-                www.useanticipate.com
-              </a>
-            </p>
-
-            <p className="text-black">
-              I&apos;m also a Tech Investments Analyst at the venture capital
-              firm, New Enterprise Associates (NEA). Founded in 1977, NEA has
-              more than $28 billion in assets under management as of June 30,
-              2025. As one of the largest venture funds in the world, NEA has
-              284 portfolio company IPOs and more than 500 mergers and
-              acquisitions.
-              For more information, please visit{" "}
+              I&apos;m largely interested in building with technology and early
+              stage investing. I work at{" "}
               <a
                 href="https://www.nea.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-b border-black hover:bg-black hover:text-white transition-colors"
               >
-                www.nea.com
-              </a>
-              .
+                NEA
+              </a>{" "}
+              as an Analyst where I focus on drug discovery, continual
+              learning, and AI infrastructure. I also do Applied AI where I
+              help imagine what an AI native vc fund looks like. NEA is one of
+              the largest venture capital firms in the world, with over $35B+
+              AUM and a 50+ year history of backing category-defining companies
+              including Uber, Cloudflare, Robinhood, Databricks, Coursera, and
+              Salesforce.
+            </p>
+
+            <p className="text-black">
+              I&apos;m a technologist and founder at heart. I&apos;ve worked on
+              several start-ups. I co-founded a viral international calling
+              service after Skype shut down, an AI consumer start-up that
+              builds general user models, and a social betting app when I was
+              16.
+            </p>
+
+            <p className="text-black">
+              <Link
+                href="/blog"
+                className="border-b border-black hover:bg-black hover:text-white transition-colors"
+              >
+                Every sunday I post my thoughts
+              </Link>{" "}
+              on the tech landscape, and early and late stage buyside dealflow.
+            </p>
+
+            <p className="text-black">
+              Campus involvements: I lead Morningside Venture Fund,
+              Columbia&apos;s first student run venture capital fund. I&apos;m
+              also involved in Columbia Venture Partners (Former Co-Director of
+              Partnerships and Communications).
             </p>
 
             <div className="pt-3">
               <p className="text-gray-600 text-sm uppercase tracking-wider mb-2">
-                past ventures and research distillations
+                what I&apos;ve worked on:
               </p>
               <div className="space-y-1.5 text-black">
                 <div>
@@ -212,9 +225,6 @@ export default function Home() {
                   ($400) in Columbia&apos;s oldest fast pitch competition
                   (Freshman Year)
                 </div>
-                <div className="pt-1">
-                  <span className="text-gray-600 cursor-default">more</span>
-                </div>
               </div>
             </div>
 
@@ -262,7 +272,7 @@ export default function Home() {
       {/* About Section */}
       <section className="px-8 md:px-16 lg:px-24 py-16 bg-gray-50">
         <article className="w-full max-w-5xl mx-auto">
-          <h2 className="text-lg font-bold text-black uppercase tracking-wider border-b-2 border-black pb-2 inline-block mb-8">
+          <h2 className="text-lg font-normal text-black uppercase tracking-wider border-b-2 border-black pb-2 inline-block mb-8">
             About
           </h2>
           <div className="flex flex-col md:flex-row gap-10 items-start">
@@ -273,14 +283,12 @@ export default function Home() {
                 className="w-full rounded-2xl object-cover"
               />
             </div>
-            <div className="w-full md:w-2/3 text-base leading-relaxed space-y-4 text-black">
+            <div className="w-full md:w-2/3 text-lg leading-relaxed space-y-4 text-black">
               <p>
                 Aaron Siddiky is an American entrepreneur, computer scientist,
-                and investor who is currently the Co-Founder and CEO of
-                Anticipate, and a Tech Investments Analyst at the venture
-                capital fund New Enterprise Associates. He is a full-ride
-                scholarship recipient, and a 2024 Carl M. Brukenfeld Class of
-                1927 Memorial Named Scholar at Columbia University.
+                and investor. He is a full-ride scholarship recipient, and a
+                2024 Carl M. Brukenfeld Class of 1927 Memorial Named Scholar at
+                Columbia University.
               </p>
               <div className="grid grid-cols-2 gap-4 text-sm pt-4">
                 <div>
